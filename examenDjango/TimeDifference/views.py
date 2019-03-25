@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from datetime import datetime
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFound
+import pytz
 
 # Create your views here.
 
@@ -8,6 +9,10 @@ def index(request):
     
     dateNow = datetime.now()
     DateBrexit = datetime(2019,3,29,11)
+
+    londen = pytz.timezone("Europe/London")
+    dateNow = londen.localize(dateNow)
+    DateBrexit = londen.localize(DateBrexit)
 
     diff = DateBrexit - dateNow
 
