@@ -6,7 +6,7 @@ from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseNotFou
 
 def index(request):
     
-    dateNow = datetime.now().astimezone
+    dateNow = datetime.now()
     DateBrexit = datetime(2019,3,29,11)
 
     diff = DateBrexit - dateNow
