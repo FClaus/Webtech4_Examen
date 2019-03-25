@@ -80,6 +80,8 @@ public class Wallet {
 	public PublicKey getPublicKey() {
 		return this.publicKey;
 	}
+
+	
 }
 
 
